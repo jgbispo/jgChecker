@@ -28,7 +28,7 @@ const jgChecker = require("jg-checker");
 ```js
 const jgChecker = require("jg-checker");
 
-jgchecker.checkNumber(<data-that-will-be-verified>, <error-message-you-want>)
+jgchecker.checkNumber(<data-that-will-be-verified>, <error-message-you-want>, <error-message-if-empty>)
 
 ```
 
