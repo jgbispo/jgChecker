@@ -1,0 +1,27 @@
+{
+  "name": "jg-checker",
+  "version": "1.0.0",
+  "description": "The jg-checker has the function of verifying what the type of variable will be, what is really expected to avoid that something not wanted is accepted and of a catastrophic error in the system",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgbispo/jg-checker.git"
+  },
+  "keywords": [
+    "checker",
+    "data checker",
+    ""
+  ],
+  "author": "João Gustavo Soares Bispo <jgbispo20@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgbispo/jg-checker/issues"
+  },
+  "homepage": "https://github.com/jgbispo/jg-checker#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
