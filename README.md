@@ -6,10 +6,13 @@
 
 You can use jg-checker to check data entry depending on your project, you can check data like
 
-- Integers
+- Number
 - String
-- Float
-  
+- Boolean
+- Function
+- Object
+- Array
+
 ### Install package
 ```shell
 npm i jg-checker
