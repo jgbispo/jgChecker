@@ -4,18 +4,6 @@
  * GPL-3.0 License
  */
 
-const checkNumber = require("./lib/checkNumber")
-const checkString = require("./lib/checkString")
-const checkBoolean = require("./lib/checkBoolean")
-const checkObject = require("./lib/checkObject")
-const checkFunction = require("./lib/checkFunction")
-const checkArray = require("./lib/checkArray")
+const checkTypeOf = require("./lib/typeof/index")
 
-module.exports = {
-    checkNumber,
-    checkString,
-    checkBoolean,
-    checkObject,
-    checkFunction,
-    checkArray
-}
+module.exports = { checkTypeOf }

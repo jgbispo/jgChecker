@@ -9,13 +9,13 @@ describe("Testing all functions", () => {
     it("CheckArray - without error", function () {
         const array = ["obj-1", "obj-2", "obj-3"];
 
-        return jgCheck.checkArray(array)
+        return jgCheck.checkTypeOf.Array(array)
     });
 
     it("CheckArray - with error", function () {
         const array = ["obj-1", "obj-2", "obj-3"];
         try {
-            jgCheck.checkArray("undefine")
+            jgCheck.checkTypeOf.Array("undefine")
         } catch (error) {
             expect(error.message).toBe("The data provided is not a array")
         }
@@ -25,7 +25,7 @@ describe("Testing all functions", () => {
         const und = undefined;
 
         try {
-            jgCheck.checkArray(und, "not a array", "No data")
+            jgCheck.checkTypeOf.Array(und, "not a array", "No data")
         } catch (error) {
             expect(error.message).toBe("No data")
         }
@@ -38,14 +38,14 @@ describe("Testing all functions", () => {
     it("CheckBoolean - without error", function () {
         const boolean = true;
 
-        return jgCheck.checkBoolean(boolean)
+        return jgCheck.checkTypeOf.Boolean(boolean)
     });
 
     it("CheckBoolean - with error", function () {
         const boolean = true;
 
         try {
-            jgCheck.checkBoolean("undefine")
+            jgCheck.checkTypeOf.Boolean("undefine")
         } catch (error) {
             expect(error.message).toBe("The data provided is not a boolean")
         }
@@ -55,7 +55,7 @@ describe("Testing all functions", () => {
         const und = undefined;
 
         try {
-            jgCheck.checkBoolean(und, "not a boolean", "No data")
+            jgCheck.checkTypeOf.Boolean(und, "not a boolean", "No data")
         } catch (error) {
             expect(error.message).toBe("No data")
         }
@@ -68,12 +68,12 @@ describe("Testing all functions", () => {
     it("CheckFunction - without error", function () {
         const fun = function test() { return };
 
-        return jgCheck.checkFunction(fun)
+        return jgCheck.checkTypeOf.Function(fun)
     });
 
     it("CheckFunction - with error", function () {
         try {
-            jgCheck.checkFunction("undefine")
+            jgCheck.checkTypeOf.Function("undefine")
         } catch (error) {
             expect(error.message).toBe("The data provided is not a function")
         }
@@ -83,7 +83,7 @@ describe("Testing all functions", () => {
         const und = undefined;
 
         try {
-            jgCheck.checkFunction(und, "not a function", "No data")
+            jgCheck.checkTypeOf.Function(und, "not a function", "No data")
         } catch (error) {
             expect(error.message).toBe("No data")
         }
@@ -96,12 +96,12 @@ describe("Testing all functions", () => {
     it("CheckFunction - without error", function () {
         const number = 12;
 
-        return jgCheck.checkNumber(number)
+        return jgCheck.checkTypeOf.Number(number)
     });
 
     it("CheckFunction - with error", function () {
         try {
-            jgCheck.checkNumber("undefine")
+            jgCheck.checkTypeOf.Number("undefine")
         } catch (error) {
             expect(error.message).toBe("The data provided is not a number")
         }
@@ -111,7 +111,7 @@ describe("Testing all functions", () => {
         const und = undefined;
 
         try {
-            jgCheck.checkNumber(und, "not a number", "No data")
+            jgCheck.checkTypeOf.Number(und, "not a number", "No data")
         } catch (error) {
             expect(error.message).toBe("No data")
         }
@@ -124,12 +124,12 @@ describe("Testing all functions", () => {
     it("CheckObject - without error", function () {
         const obj = { name: "João Gustavo" };
 
-        return jgCheck.checkObject(obj)
+        return jgCheck.checkTypeOf.Object(obj)
     });
 
     it("CheckObject - with error", function () {
         try {
-            jgCheck.checkObject("undefine")
+            jgCheck.checkTypeOf.Object("undefine")
         } catch (error) {
             expect(error.message).toBe("The data provided is not a object")
         }
@@ -139,7 +139,7 @@ describe("Testing all functions", () => {
         const und = undefined;
 
         try {
-            jgCheck.checkObject(und, "not a number", "No data")
+            jgCheck.checkTypeOf.Object(und, "not a number", "No data")
         } catch (error) {
             expect(error.message).toBe("No data")
         }
@@ -152,12 +152,12 @@ describe("Testing all functions", () => {
     it("CheckString - without error", function () {
         const string = "João Gustavo";
 
-        return jgCheck.checkString(string)
+        return jgCheck.checkTypeOf.String(string)
     });
 
     it("CheckString - with error", function () {
         try {
-            jgCheck.checkString("undefine")
+            jgCheck.checkTypeOf.String("undefine")
         } catch (error) {
             expect(error.message).toBe("The data provided is not a string")
         }
@@ -167,7 +167,7 @@ describe("Testing all functions", () => {
         const und = undefined;
 
         try {
-            jgCheck.checkString(und, "not a number", "No data")
+            jgCheck.checkTypeOf.String(und, "not a number", "No data")
         } catch (error) {
             expect(error.message).toBe("No data")
         }
