@@ -4,6 +4,6 @@
  * GPL-3.0 License
  */
 
-const checkTypeOf = require("./lib/typeof/index")
+const checkTypeOf = require("./lib/typeof/index");
 
-module.exports = { checkTypeOf }
+module.exports = { checkTypeOf };
