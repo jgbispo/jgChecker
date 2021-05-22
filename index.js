@@ -5,5 +5,9 @@
  */
 
 const checkTypeOf = require("./lib/typeof/index");
+const token = require("./lib/token/index");
 
-module.exports = { checkTypeOf };
+module.exports = {
+	checkTypeOf,
+	token
+};
