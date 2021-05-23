@@ -1,6 +1,5 @@
 # jgChecker
- The jg-checker has the function of verifying what the type of variable will be, what is really expected to avoid that something not wanted is accepted and of a catastrophic error in the system.
-
+jg-checker is able to check data types and generate valid tokens
 
 ## What is verified?
 
@@ -23,22 +22,75 @@ $ npm i jg-checker
 const jgChecker = require("jg-checker");
 ```
 
-### Using jgChecker
+## Available functions 
+
+### Checking the types of variables
 
 ```js
-const jgChecker = require("jg-checker");
-
-jgchecker.checkNumber(<data-that-will-be-verified>, <error-message-you-want>, <error-message-if-empty>)
-
+checkTypeOf.string(<string>);
+// Responsible for checking if the type is a String
 ```
 
 ```js
-const jgChecker = require("jg-checker");
-
-// Return in this case is nothing, meaning it passed the test
-jgchecker.checkNumber(12, "It's not a number")
-
-// Return in this case is the message that was chosen, in no case, then the default is used
-jgchecker.checkNumber("Not a number")
-
+checkTypeOf.number(<number>);
+// Responsible for checking if the type is a Number
 ```
+
+```js
+checkTypeOf.object(<object>);
+// Responsible for checking if the type is an Object
+```
+
+```js
+checkTypeOf.fun(<fun>);
+// Responsible for checking if the type is a Function
+```
+
+```js
+checkTypeOf.boolean(<boolean>);
+// Responsible for checking if the type is a Boolean
+```
+
+```js
+checkTypeOf.array(<array>);
+// Responsible for checking if the type is an Array
+```
+
+### Token generation
+
+```js
+const token = token.sing({payload}, secret, time);
+
+// payload - A valid json
+// secret - A string so that your token is unique
+// time (optional) - Time for the token to inspire
+
+------------------------------------------------------
+
+// console.log(token) == token -> string
+```
+
+```js
+token.verify(token)
+
+/* 
+You will be responsible for verifying the token, from its integrity until the expiration time 
+*/
+
+// If invalid, it will return an error
+```
+
+```js
+token.decode(token, secret)
+
+/* decodes the token, allowing data to be taken, such as the payload used to generate */
+```
+
+## Author
+
+- [Instagram]("https://www.instagram.com/3isp0/")
+- [Git Hub]("https://github.com/jgbispo")
+
+## License
+
+[LICENSE](LICENSE)
