@@ -9,7 +9,9 @@
   },
   "keywords": [
     "checker",
-    "data checker"
+    "data checker",
+    "token",
+    "auth token"
   ],
   "author": "João Gustavo Soares Bispo <jgbispo20@gmail.com>",
   "license": "GPL-3.0 License",
