@@ -9,7 +9,7 @@ describe("Testing all functions Token", () => {
 	/////////////////
 
 	it("Token Sign - without error", function () {
-		tk = token.sign("payload", "secret");
+		tk = token.sign({ id: "20ab" }, "secret");
 
 		expect(tk != undefined);
 	});
@@ -40,6 +40,21 @@ describe("Testing all functions Token", () => {
 		expect(response == true);
 	});
 
+	it("Token Verify Timestamp - without error", function () {
+		const response = token.verify(tk, "secret");
+
+		expect(response == true);
+	});
+
+	it("Token Verify Timestamp - with error", async function () {
+		try {
+			token.verify("eyJhbGciOiJIUzI1NiJ9.eyJpZCI6Im9rIiwiZXhwIjoxNjIxNzQ3NzMxfQ.0xaa3M9AKnq_spc8gcPFnS4gAKrYil-dWdY3JFxoU5E", "secret");
+		} catch (error) {
+			expect(error.message).toBe("Token expired");
+		}
+	});
+
+
 	it("Token Verify - with error", function () {
 		try {
 			token.verify(12);
@@ -64,8 +79,8 @@ describe("Testing all functions Token", () => {
 		const response = token.decode(tk);
 
 		expect(response).toMatchObject({
-			payload: "payload"
-		}); 	
+			payload: { "id": "20ab" },
+		});
 	});
 
 	it("Token Decode - with error", function () {
