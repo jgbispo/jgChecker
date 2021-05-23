@@ -10,12 +10,12 @@ describe("Testing all functions typeOf", () => {
 	it("CheckArray - without error", function () {
 		const array = ["obj-1", "obj-2", "obj-3"];
 
-		return checkTypeOf.Array(array);
+		return checkTypeOf.array(array);
 	});
 
 	it("CheckArray - with error", function () {
 		try {
-			checkTypeOf.Array("undefine");
+			checkTypeOf.array("undefine");
 		} catch (error) {
 			expect(error.message).toBe("The data provided is not a array");
 		}
@@ -25,7 +25,7 @@ describe("Testing all functions typeOf", () => {
 		const und = undefined;
 
 		try {
-			checkTypeOf.Array(und, "not a array", "No data");
+			checkTypeOf.array(und, "not a array", "No data");
 		} catch (error) {
 			expect(error.message).toBe("No data");
 		}
@@ -38,12 +38,12 @@ describe("Testing all functions typeOf", () => {
 	it("CheckBoolean - without error", function () {
 		const boolean = true;
 
-		return checkTypeOf.Boolean(boolean);
+		return checkTypeOf.boolean(boolean);
 	});
 
 	it("CheckBoolean - with error", function () {
 		try {
-			checkTypeOf.Boolean("undefine");
+			checkTypeOf.boolean("undefine");
 		} catch (error) {
 			expect(error.message).toBe("The data provided is not a boolean");
 		}
@@ -53,7 +53,7 @@ describe("Testing all functions typeOf", () => {
 		const und = undefined;
 
 		try {
-			checkTypeOf.Boolean(und, "not a boolean", "No data");
+			checkTypeOf.boolean(und, "not a boolean", "No data");
 		} catch (error) {
 			expect(error.message).toBe("No data");
 		}
@@ -66,12 +66,12 @@ describe("Testing all functions typeOf", () => {
 	it("CheckFunction - without error", function () {
 		const fun = function test() { return; };
 
-		return checkTypeOf.Function(fun);
+		return checkTypeOf.fun(fun);
 	});
 
 	it("CheckFunction - with error", function () {
 		try {
-			checkTypeOf.Function("undefine");
+			checkTypeOf.fun("undefine");
 		} catch (error) {
 			expect(error.message).toBe("The data provided is not a function");
 		}
@@ -81,7 +81,7 @@ describe("Testing all functions typeOf", () => {
 		const und = undefined;
 
 		try {
-			checkTypeOf.Function(und, "not a function", "No data");
+			checkTypeOf.fun(und, "not a function", "No data");
 		} catch (error) {
 			expect(error.message).toBe("No data");
 		}
@@ -94,12 +94,12 @@ describe("Testing all functions typeOf", () => {
 	it("CheckFunction - without error", function () {
 		const number = 12;
 
-		return checkTypeOf.Number(number);
+		return checkTypeOf.number(number);
 	});
 
 	it("CheckFunction - with error", function () {
 		try {
-			checkTypeOf.Number("undefine");
+			checkTypeOf.number("undefine");
 		} catch (error) {
 			expect(error.message).toBe("The data provided is not a number");
 		}
@@ -109,7 +109,7 @@ describe("Testing all functions typeOf", () => {
 		const und = undefined;
 
 		try {
-			checkTypeOf.Number(und, "not a number", "No data");
+			checkTypeOf.number(und, "not a number", "No data");
 		} catch (error) {
 			expect(error.message).toBe("No data");
 		}
@@ -122,12 +122,12 @@ describe("Testing all functions typeOf", () => {
 	it("CheckObject - without error", function () {
 		const obj = { name: "João Gustavo" };
 
-		return checkTypeOf.Object(obj);
+		return checkTypeOf.object(obj);
 	});
 
 	it("CheckObject - with error", function () {
 		try {
-			checkTypeOf.Object("undefine");
+			checkTypeOf.object("undefine");
 		} catch (error) {
 			expect(error.message).toBe("The data provided is not a object");
 		}
@@ -137,7 +137,7 @@ describe("Testing all functions typeOf", () => {
 		const und = undefined;
 
 		try {
-			checkTypeOf.Object(und, "not a number", "No data");
+			checkTypeOf.object(und, "not a number", "No data");
 		} catch (error) {
 			expect(error.message).toBe("No data");
 		}
@@ -150,12 +150,12 @@ describe("Testing all functions typeOf", () => {
 	it("CheckString - without error", function () {
 		const string = "João Gustavo";
 
-		return checkTypeOf.String(string);
+		return checkTypeOf.string(string);
 	});
 
 	it("CheckString - with error", function () {
 		try {
-			checkTypeOf.String("undefine");
+			checkTypeOf.string("undefine");
 		} catch (error) {
 			expect(error.message).toBe("The data provided is not a string");
 		}
@@ -165,7 +165,7 @@ describe("Testing all functions typeOf", () => {
 		const und = undefined;
 
 		try {
-			checkTypeOf.String(und, "not a number", "No data");
+			checkTypeOf.string(und, "not a number", "No data");
 		} catch (error) {
 			expect(error.message).toBe("No data");
 		}
