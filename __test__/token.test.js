@@ -18,7 +18,7 @@ describe("Testing all functions Token", () => {
 		try {
 			token.sign(15);
 		} catch (error) {
-			expect(error.message).toBe("The data provided is not a String");
+			expect(error.message).toBe("The data provided is not a object");
 		}
 	});
 
@@ -51,6 +51,34 @@ describe("Testing all functions Token", () => {
 	it("Token Verify - with error", function () {
 		try {
 			token.verify(tk, undefined);
+		} catch (error) {
+			expect(error.message).toBe("No data was entered");
+		}
+	});
+
+	/////////////////
+	/// Token Decode
+	/////////////////
+
+	it("Token Decode - without error", function () {
+		const response = token.decode(tk);
+
+		expect(response).toMatchObject({
+			payload: "payload"
+		}); 	
+	});
+
+	it("Token Decode - with error", function () {
+		try {
+			token.decode(12);
+		} catch (error) {
+			expect(error.message).toBe("The data provided is not a String");
+		}
+	});
+
+	it("Token Decode - with error", function () {
+		try {
+			token.decode(undefined);
 		} catch (error) {
 			expect(error.message).toBe("No data was entered");
 		}
