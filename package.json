@@ -1,6 +1,6 @@
 {
   "name": "jgchecker",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The jg-checker has the function of verifying what the type of variable will be, what is really expected to avoid that something not wanted is accepted and of a catastrophic error in the system",
   "main": "index.js",
   "repository": {
