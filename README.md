@@ -15,11 +15,11 @@ You can use jg-checker to check data entry depending on your project, you can ch
 ## Quick Start
 
 ```shell
-$ npm i jg-checker
+$ npm i jgchecker
 ```
 
 ```js
-const jgChecker = require("jg-checker");
+const jgChecker = require("jgchecker");
 ```
 
 ## Available functions 
